@@ -1,11 +1,10 @@
-function getIndexToIns(arr, num) {
-  let numbersLessThenNum = 0;
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] < num){
-      numbersLessThenNum++;
-    }
+function chunkArrayInGroups(arr, size) {
+  let arr2 = [];
+  while(arr.length > 0){
+    arr2.push(arr.splice(0, size));
   }
-  return numbersLessThenNum;
+  arr = arr2;
+  return arr;
 }
 
-getIndexToIns([40, 60], 50);
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
