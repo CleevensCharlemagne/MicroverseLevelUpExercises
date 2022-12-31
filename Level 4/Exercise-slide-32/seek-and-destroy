@@ -1,0 +1,18 @@
+function destroyer(arr) {
+  let input = arguments[0];
+  let destroy = [];
+  let output = [];
+
+  for(let i = 1; i < arguments.length; i++){
+    destroy.push(arguments[i]);
+  }
+
+  for(let i = 0; i < input.length; i++){
+    if(destroy.includes(input[i]) === false){
+      output.push(input[i]);
+    }
+  }
+  return output;
+}
+
+destroyer([3, 5, 1, 2, 2], 2, 3, 5);
