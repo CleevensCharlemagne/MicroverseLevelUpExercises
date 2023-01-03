@@ -1,0 +1,41 @@
+function veryBigSum(){
+  let output = 0;
+  
+  let length = prompt("Enter the length of your array");
+  length = parseInt(length);
+  while(length < 1 || length > 10){
+    length = prompt("Enter the length of your array 1 >= n <= 10 ");
+    length = parseInt(length);
+  }
+
+ let valuableEntries = false; 
+
+  while(valuableEntries === false){
+    valuableEntries = true;
+    
+   let entries = prompt("Your " + length + " entryt(ies) separated by space").split(" ");
+
+  if(entries.length > length || entries.length < length){
+  console.log("The length of your array should be equal to: " + length+" ");
+    valuableEntries = false;
+} else if(entries.length === length){
+    let index = 0;
+  while(index < length){
+    if(entries[index] < 0 || entries[index] > 10**10){
+      valuableEntries = false;
+      break;
+    }
+  }
+} else{
+    valuableEntries = true;
+}
+ 
+  }
+  
+  for(let i = 0; i < length; i++){
+    output += parseInt(entries[i]);
+  }
+
+  return output;
+}
+console.log(veryBigSum());
