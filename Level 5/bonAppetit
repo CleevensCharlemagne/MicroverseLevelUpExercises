@@ -1,0 +1,32 @@
+function bonAppetit(bill, k, b){
+  let n = bill.length;
+  let due_sum = 0;
+
+  if(n >= 2 && n <= 10**5){
+    for(let i = 0; i < n; i++){
+      if(i !== k){
+        due_sum += bill[i];
+      }  
+    }
+
+    due_sum = b - (due_sum / 2);
+    if(due_sum === 0){
+      console.log("Bon appetit!");
+    }
+    else{
+      console.log(due_sum);
+    }
+  }
+  else{
+    console.log("That bill has an invalid length!!!");
+    return;
+  }
+}
+
+function main(){
+  let first_line = prompt("Please enter the length of your array (bill) and the index of teh meal to remove from your bill sepearted by a space.").split(" ");
+
+  
+}
+
+bonAppetit([3, 10, 2, 9], 1, 12);
