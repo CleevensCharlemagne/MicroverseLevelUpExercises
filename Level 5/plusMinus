@@ -1,41 +1,48 @@
-function veryBigSum(){
-  let output = 0;
-  
-  let length = prompt("Enter the length of your array");
-  length = parseInt(length);
-  while(length < 1 || length > 10){
-    length = prompt("Enter the length of your array 1 >= n <= 10 ");
-    length = parseInt(length);
+function plusMinus(arr){
+  negatives = 0;
+  positives = 0;
+  zeros = 0;
+
+  if(arr.length > 0 && arr.length <= 100){
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] > 0){
+        positives++;
+      } else if(arr[i] <0){
+        negatives++;
+      } else {
+        zeros++;
+      }
+    }
+
+    negatives  = (negatives/arr.length).toFixed(6);
+    positives  = (positives/arr.length).toFixed(6);
+    zeros  = (zeros/arr.length).toFixed(6);
+  } else{
+    console.log("Your array is too long!!!");
+    return;
   }
 
- let valuableEntries = false; 
+  console.log(negatives);
+  console.log(positives);
+  console.log(zeros);
+}
 
-  while(valuableEntries === false){
-    valuableEntries = true;
-    
-   let entries = prompt("Your " + length + " entryt(ies) separated by space").split(" ");
-
-  if(entries.length > length || entries.length < length){
-  console.log("The length of your array should be equal to: " + length+" ");
-    valuableEntries = false;
-} else if(entries.length === length){
-    let index = 0;
-  while(index < length){
-    if(entries[index] < 0 || entries[index] > 10**10){
-      valuableEntries = false;
+function main(){
+  let entries = prompt("Your entries").split(" ");
+  let valuable = true;
+  for(let i = 0; i < entries.length; i++){
+    if(entries[i] < -100 || entries[i] > 100){
+      valuable = false;
       break;
     }
   }
-} else{
-    valuableEntries = true;
-}
- 
+
+  if(valuable === true){
+    plusMinus(entries);
+  } else{
+    console.log("All the entries of your array should be greater or equal to -100 and less or equal to 100");
   }
   
-  for(let i = 0; i < length; i++){
-    output += parseInt(entries[i]);
-  }
-
-  return output;
 }
-console.log(veryBigSum());
+
+main();
