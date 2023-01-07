@@ -30,9 +30,9 @@ function readLine() {
  */
 
 function balancedSums(arr) {
-    // Write your code here
+    // write your code here
     let last = arr.length;
-    let left = 0
+    let left = 0;
     let right = arr[0];
     let sumLeft = arr.slice(0, arr.length);
     
@@ -51,6 +51,7 @@ function balancedSums(arr) {
   return "NO";
 }
 
+//Main
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
