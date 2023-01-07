@@ -23,10 +23,10 @@ function readLine() {
 }
 
 /*
- * complete the 'balancedSums' function below.
+ * Complete the 'balancedSums' function below.
  *
- * the function is expected to return a STRING.
- * the function accepts INTEGER_ARRAY arr as parameter.
+ * The function is expected to return a STRING.
+ * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
 function balancedSums(arr) {
