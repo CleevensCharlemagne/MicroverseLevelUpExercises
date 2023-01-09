@@ -2,8 +2,7 @@
 Write a function frequencies(arr) that takes in the string:
 "lkazjsdfnvapsifdophoidhjsadlkfjgbplak" and return a hash table containing all the different characters in it as the keys, and the number of times each character is repeated as the values
  
-Example:
- 
+Example: 
 input: "lkazjsdfnvapsifdophoidhjsadlkfjgbplak"
  
 output:  
@@ -34,6 +33,8 @@ const out2 = JSON.stringify(
  
 if (out1 == out2) {
  console.log("SUCCESS!!");
+
 } else {
  console.log("Whoops!! Try again :o)");
+ 
 }
