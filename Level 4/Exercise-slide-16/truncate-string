@@ -1,3 +1,4 @@
+//Truncate strings
 function truncateString(str, num) {
   let temp = "";
   if(str.length > num){
