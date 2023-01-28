@@ -1,3 +1,4 @@
+//Sum in range
 function sumAll(arr) {
   let counter = 0;
    let first = arr[0];
